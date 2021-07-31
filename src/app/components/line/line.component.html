@@ -1,0 +1,16 @@
+<th scope="row">{{ id }}</th>
+<td>{{ name }}</td>
+<td>{{ firstRelease | date: "yyyy" }}</td>
+<td>
+  <button class="btn-success ml-5" [routerLink]="detailsUrl">Détails</button>
+
+  <button class="btn-primary ml-5" [routerLink]="commentUrl">
+    Commentaire(s)
+  </button>
+
+  <button class="btn-secondary ml-5" [routerLink]="editUrl">Modifier</button>
+
+  <button class="btn-danger ml-5" (click)="onClickDeleteSerie(id)">
+    Supprimer
+  </button>
+</td>

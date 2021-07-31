@@ -1,0 +1,9 @@
+<h3 class="mt-5">Commentaire(s) sur {{serie.name}} </h3>
+<div *ngFor="let comment of comments">
+    <h6 class="mt-5">{{comment.body}}</h6>
+    <p>Posté le {{comment.publishedDate | date: 'dd/MM/yyyy'}} par {{comment.author}}</p>
+    <button class="btn-danger" (click)="onClickDeleteComment(id)">Supprimer</button>
+</div>
+
+
+<a routerLink="/series" class="card-link d-flex justify-content-center">Retourner vers les séries</a>

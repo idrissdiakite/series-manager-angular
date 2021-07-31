@@ -1,0 +1,19 @@
+<table class="table table-striped mt-5">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nom de la série</th>
+      <th scope="col">Année de lancement</th>
+      <th scope="col">Actions supplémentaires</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      app-line
+      *ngFor="let serie of series"
+      [id]="serie.id"
+      [name]="serie.name"
+      [firstRelease]="serie.firstRelease"
+    ></tr>
+  </tbody>
+</table>

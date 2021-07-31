@@ -1,0 +1,109 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form (ngSubmit)="onSubmitEditSerie()" #editSerie="ngForm">
+      <!--newSerie.name-->
+      <div class="form-group mt-5">
+        <label for="name">Nom de la série</label>
+        <input
+          type="text"
+          placeholder="Nom de la série*"
+          id="name"
+          class="form-control"
+          name="name"
+          [(ngModel)]="serie.name"
+          required
+        />
+      </div>
+
+      <!--newSerie.firstRelease-->
+      <div class="form-group mt-3">
+        <label for="firstRelease">Année de création</label>
+        <input
+          type="date"
+          placeholder="Année de création*"
+          id="firstRelease"
+          class="form-control"
+          name="firstRelease"
+          [(ngModel)]="serie.firstRelease"
+          required
+        />
+      </div>
+
+      <!--newSerie.seasonsNumber-->
+      <div class="form-group">
+        <label for="seasonsNumber">Nombre de saisons</label>
+        <input
+          type="number"
+          placeholder="Nombre de saisons*"
+          id="seasonsNumber"
+          class="form-control"
+          name="seasonsNumber"
+          [(ngModel)]="serie.seasonsNumber"
+          required
+          minlength="1"
+        />
+      </div>
+
+      <!--newSerie.description-->
+      <div class="form-group">
+        <label for="description">Synopsis de la série</label>
+        <input
+          type="text"
+          placeholder="Synopsis de la série*"
+          id="description"
+          class="form-control"
+          name="description"
+          [(ngModel)]="serie.description"
+          required
+          minlength="10"
+        />
+      </div>
+
+      <!--newSerie.description-->
+      <div class="form-group">
+        <label for="picture">Affiche de la série</label>
+        <input
+          type="text"
+          placeholder="Entrez URL complète*"
+          id="picture"
+          class="form-control"
+          name="picture"
+          [(ngModel)]="serie.picture"
+          required
+          minlength="10"
+        />
+      </div>
+
+      <!--newSerie.review-->
+      <div class="form-group">
+        <label for="review">Critique de la série</label>
+        <input
+          type="text"
+          placeholder="Critique de la série*"
+          id="review"
+          class="form-control"
+          name="review"
+          [(ngModel)]="serie.review"
+          required
+          minlength="5"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="editSerie.invalid"
+      >
+        Editer !
+      </button>
+
+      <div class="mt-5 mb-2 text-center">
+        <div *ngIf="msg" class="alert-success">{{ msg }}</div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="mt-2 mb-5 text-center">
+  <a routerLink="/series" class="card-link">Retourner vers les séries</a>
+</div>

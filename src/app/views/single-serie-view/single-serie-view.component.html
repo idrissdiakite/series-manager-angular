@@ -1,0 +1,21 @@
+<div class="card mx-auto mt-5 mb-5" style="width: 55rem">
+  <div class="card-body text-center">
+    <h1 class="card-title mb-3">{{ serie.name }}</h1>
+    <h5 class="card-subtitle mt-3 mb-4 text-danger">
+      {{ serie.firstRelease | date: "yyyy" }} -
+      {{ serie.seasonsNumber }} saisons
+    </h5>
+    <img src="{{ serie.picture }}" alt="" id="img" />
+    <h6 class="card-text mt-5 mb-5 ml-3 mr-3 text-justify">
+      {{ serie.description }}
+    </h6>
+    <hr />
+    <h6 class="card-text mt-5 mb-5 ml-3 mr-3 font-italic">
+      {{ serie.review }}
+    </h6>
+
+    <a routerLink="/series" class="card-link d-flex justify-content-center"
+      >Retourner vers les séries</a
+    >
+  </div>
+</div>
