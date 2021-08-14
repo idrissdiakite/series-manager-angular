@@ -1,6 +1,6 @@
 # Series Manager - Angular
 
-Application permettant d'afficher une liste de séries avec diverses informations (affiche, année de lancement, nombre de saisons, synopsis etc..) avec possibilité d'ajouter, modifier ou supprimer une ou plusieurs série. Mise en forme avec Bootstrap.
+Application permettant d'afficher une liste de séries avec diverses informations (affiche, année de lancement, nombre de saisons, synopsis etc..) avec possibilité d'ajouter, modifier ou supprimer une ou plusieurs séries. Mise en forme avec Bootstrap.
 À noter que cette application a été réalisé dans un temps imparti en cours de formation.
 
 ## 🚀 Installation
